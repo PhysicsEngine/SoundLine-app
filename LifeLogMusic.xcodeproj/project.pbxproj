@@ -12,6 +12,12 @@
 		473151731B88214D00B75D93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 473151721B88214D00B75D93 /* Images.xcassets */; };
 		473151761B88214D00B75D93 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 473151741B88214D00B75D93 /* LaunchScreen.xib */; };
 		473151821B88214D00B75D93 /* LifeLogMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473151811B88214D00B75D93 /* LifeLogMusicTests.swift */; };
+		4731518C1B882B5100B75D93 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731518B1B882B5100B75D93 /* RecordingViewController.swift */; };
+		4731518E1B8836FC00B75D93 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731518D1B8836FC00B75D93 /* TimelineViewController.swift */; };
+		473151901B8838D500B75D93 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731518F1B8838D500B75D93 /* TableViewCell.swift */; };
+		473151921B883A4A00B75D93 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473151911B883A4A00B75D93 /* TopViewController.swift */; };
+		473151941B883E1000B75D93 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473151931B883E1000B75D93 /* FilterViewController.swift */; };
+		473151961B883E4A00B75D93 /* SendingCompleteViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473151951B883E4A00B75D93 /* SendingCompleteViewControler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,12 @@
 		4731517B1B88214D00B75D93 /* LifeLogMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeLogMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		473151801B88214D00B75D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		473151811B88214D00B75D93 /* LifeLogMusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeLogMusicTests.swift; sourceTree = "<group>"; };
+		4731518B1B882B5100B75D93 /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
+		4731518D1B8836FC00B75D93 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		4731518F1B8838D500B75D93 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		473151911B883A4A00B75D93 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		473151931B883E1000B75D93 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		473151951B883E4A00B75D93 /* SendingCompleteViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingCompleteViewControler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,12 @@
 				473151721B88214D00B75D93 /* Images.xcassets */,
 				473151741B88214D00B75D93 /* LaunchScreen.xib */,
 				473151691B88214C00B75D93 /* Supporting Files */,
+				4731518B1B882B5100B75D93 /* RecordingViewController.swift */,
+				4731518D1B8836FC00B75D93 /* TimelineViewController.swift */,
+				473151951B883E4A00B75D93 /* SendingCompleteViewControler.swift */,
+				4731518F1B8838D500B75D93 /* TableViewCell.swift */,
+				473151911B883A4A00B75D93 /* TopViewController.swift */,
+				473151931B883E1000B75D93 /* FilterViewController.swift */,
 			);
 			path = LifeLogMusic;
 			sourceTree = "<group>";
@@ -209,7 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				473151941B883E1000B75D93 /* FilterViewController.swift in Sources */,
+				4731518C1B882B5100B75D93 /* RecordingViewController.swift in Sources */,
+				473151961B883E4A00B75D93 /* SendingCompleteViewControler.swift in Sources */,
+				473151901B8838D500B75D93 /* TableViewCell.swift in Sources */,
 				4731516C1B88214C00B75D93 /* AppDelegate.swift in Sources */,
+				4731518E1B8836FC00B75D93 /* TimelineViewController.swift in Sources */,
+				473151921B883A4A00B75D93 /* TopViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
