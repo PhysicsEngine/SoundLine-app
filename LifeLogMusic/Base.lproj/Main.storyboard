@@ -101,7 +101,6 @@
                                 </state>
                                 <connections>
                                     <action selector="didTapRecordButton:" destination="E0K-7h-GX2" eventType="touchUpInside" id="7l1-mj-ed1"/>
-                                    <segue destination="veS-Ds-KUO" kind="show" id="mQ0-zl-Had"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -124,6 +123,8 @@
                     <navigationItem key="navigationItem" id="1GI-ye-xsE"/>
                     <connections>
                         <outlet property="displayLabel" destination="UDd-Z3-eOe" id="dch-od-0jX"/>
+                        <outlet property="recordButton" destination="MqP-RO-OX2" id="aaa-O8-xx0"/>
+                        <outlet property="stopButton" destination="VtT-JV-me3" id="BgP-5a-EKP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VFC-G6-FgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
