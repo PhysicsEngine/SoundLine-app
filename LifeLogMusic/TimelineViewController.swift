@@ -14,7 +14,15 @@ class TimelineViewController : UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Lifecycle
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        APIClient.sharedClient.timeline { (result) -> Void in
+            println(result)
+        }
+    }
 }
 
 // MARK: - UITableViewDelegate

@@ -19,6 +19,8 @@
 		473151941B883E1000B75D93 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473151931B883E1000B75D93 /* FilterViewController.swift */; };
 		473151961B883E4A00B75D93 /* SendingCompleteViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473151951B883E4A00B75D93 /* SendingCompleteViewControler.swift */; };
 		473151981B885C9900B75D93 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473151971B885C9900B75D93 /* APIClient.swift */; };
+		47D881911B886B6900893354 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D881901B886B6800893354 /* Message.swift */; };
+		47D881931B886D0400893354 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D881921B886D0400893354 /* Timeline.swift */; };
 		B864E23ABB5EA313E893E177 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3F8836FE2701958F4ACA4D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		473151931B883E1000B75D93 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		473151951B883E4A00B75D93 /* SendingCompleteViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingCompleteViewControler.swift; sourceTree = "<group>"; };
 		473151971B885C9900B75D93 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		47D881901B886B6800893354 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		47D881921B886D0400893354 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		55B32005AC2B6769528BB503 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7A3F8836FE2701958F4ACA4D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC19A5AA4BCEDC553183E18E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				473151911B883A4A00B75D93 /* TopViewController.swift */,
 				473151931B883E1000B75D93 /* FilterViewController.swift */,
 				473151971B885C9900B75D93 /* APIClient.swift */,
+				47D881901B886B6800893354 /* Message.swift */,
+				47D881921B886D0400893354 /* Timeline.swift */,
 			);
 			path = LifeLogMusic;
 			sourceTree = "<group>";
@@ -309,10 +315,12 @@
 				473151941B883E1000B75D93 /* FilterViewController.swift in Sources */,
 				4731518C1B882B5100B75D93 /* RecordingViewController.swift in Sources */,
 				473151961B883E4A00B75D93 /* SendingCompleteViewControler.swift in Sources */,
+				47D881911B886B6900893354 /* Message.swift in Sources */,
 				473151981B885C9900B75D93 /* APIClient.swift in Sources */,
 				473151901B8838D500B75D93 /* TableViewCell.swift in Sources */,
 				4731516C1B88214C00B75D93 /* AppDelegate.swift in Sources */,
 				4731518E1B8836FC00B75D93 /* TimelineViewController.swift in Sources */,
+				47D881931B886D0400893354 /* Timeline.swift in Sources */,
 				473151921B883A4A00B75D93 /* TopViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

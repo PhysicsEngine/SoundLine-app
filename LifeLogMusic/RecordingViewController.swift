@@ -30,6 +30,7 @@ class RecordingViewController : UIViewController {
     
     @IBAction func didTapStopButton(sender: UIButton) {
     }
+    
     @IBOutlet weak var displayLabel: UILabel!
   
     // MARK: - Private
