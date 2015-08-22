@@ -18,6 +18,8 @@
 		473151921B883A4A00B75D93 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473151911B883A4A00B75D93 /* TopViewController.swift */; };
 		473151941B883E1000B75D93 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473151931B883E1000B75D93 /* FilterViewController.swift */; };
 		473151961B883E4A00B75D93 /* SendingCompleteViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473151951B883E4A00B75D93 /* SendingCompleteViewControler.swift */; };
+		473151981B885C9900B75D93 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473151971B885C9900B75D93 /* APIClient.swift */; };
+		B864E23ABB5EA313E893E177 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3F8836FE2701958F4ACA4D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		473151911B883A4A00B75D93 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		473151931B883E1000B75D93 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		473151951B883E4A00B75D93 /* SendingCompleteViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingCompleteViewControler.swift; sourceTree = "<group>"; };
+		473151971B885C9900B75D93 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		55B32005AC2B6769528BB503 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7A3F8836FE2701958F4ACA4D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC19A5AA4BCEDC553183E18E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B864E23ABB5EA313E893E177 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +73,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D396D256F64D68B16CF41C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A3F8836FE2701958F4ACA4D /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4731515D1B88214C00B75D93 = {
 			isa = PBXGroup;
 			children = (
 				473151681B88214C00B75D93 /* LifeLogMusic */,
 				4731517E1B88214D00B75D93 /* LifeLogMusicTests */,
 				473151671B88214C00B75D93 /* Products */,
+				D4D8E3F557DC7604CE031545 /* Pods */,
+				2D396D256F64D68B16CF41C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +115,7 @@
 				4731518F1B8838D500B75D93 /* TableViewCell.swift */,
 				473151911B883A4A00B75D93 /* TopViewController.swift */,
 				473151931B883E1000B75D93 /* FilterViewController.swift */,
+				473151971B885C9900B75D93 /* APIClient.swift */,
 			);
 			path = LifeLogMusic;
 			sourceTree = "<group>";
@@ -127,6 +145,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D4D8E3F557DC7604CE031545 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC19A5AA4BCEDC553183E18E /* Pods.debug.xcconfig */,
+				55B32005AC2B6769528BB503 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 473151851B88214D00B75D93 /* Build configuration list for PBXNativeTarget "LifeLogMusic" */;
 			buildPhases = (
+				4488CBB60D2866FAAFE8EE8F /* Check Pods Manifest.lock */,
 				473151621B88214C00B75D93 /* Sources */,
 				473151631B88214C00B75D93 /* Frameworks */,
 				473151641B88214C00B75D93 /* Resources */,
+				BEEAAF6567532C7CBCC4B81D /* Embed Pods Frameworks */,
+				A85E72540513449958F71E7F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,6 +206,7 @@
 				TargetAttributes = {
 					473151651B88214C00B75D93 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 3R425MJPHS;
 					};
 					4731517A1B88214D00B75D93 = {
 						CreatedOnToolsVersion = 6.4;
@@ -222,6 +253,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4488CBB60D2866FAAFE8EE8F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A85E72540513449958F71E7F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEEAAF6567532C7CBCC4B81D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		473151621B88214C00B75D93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -230,6 +309,7 @@
 				473151941B883E1000B75D93 /* FilterViewController.swift in Sources */,
 				4731518C1B882B5100B75D93 /* RecordingViewController.swift in Sources */,
 				473151961B883E4A00B75D93 /* SendingCompleteViewControler.swift in Sources */,
+				473151981B885C9900B75D93 /* APIClient.swift in Sources */,
 				473151901B8838D500B75D93 /* TableViewCell.swift in Sources */,
 				4731516C1B88214C00B75D93 /* AppDelegate.swift in Sources */,
 				4731518E1B8836FC00B75D93 /* TimelineViewController.swift in Sources */,
@@ -358,21 +438,29 @@
 		};
 		473151861B88214D00B75D93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC19A5AA4BCEDC553183E18E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LifeLogMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		473151871B88214D00B75D93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55B32005AC2B6769528BB503 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LifeLogMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
