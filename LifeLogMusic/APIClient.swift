@@ -16,8 +16,7 @@ class APIClient {
     
     static let sharedClient = APIClient()
     
-    //private let domain = "https://intense-lake-9534.herokuapp.com"
-    private let domain = "http://172.16.200.132:5000"
+    private let domain = "http://serene-savannah-7700.herokuapp.com"
     
     func timeline(callback:(Result<Timeline, NSError>)->()) {
         Alamofire
