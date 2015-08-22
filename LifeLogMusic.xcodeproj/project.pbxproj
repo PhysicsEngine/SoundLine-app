@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4731516C1B88214C00B75D93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731516B1B88214C00B75D93 /* AppDelegate.swift */; };
-		4731516E1B88214C00B75D93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731516D1B88214C00B75D93 /* ViewController.swift */; };
 		473151711B88214D00B75D93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4731516F1B88214D00B75D93 /* Main.storyboard */; };
 		473151731B88214D00B75D93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 473151721B88214D00B75D93 /* Images.xcassets */; };
 		473151761B88214D00B75D93 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 473151741B88214D00B75D93 /* LaunchScreen.xib */; };
@@ -29,7 +28,6 @@
 		473151661B88214C00B75D93 /* LifeLogMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeLogMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4731516A1B88214C00B75D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4731516B1B88214C00B75D93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4731516D1B88214C00B75D93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		473151701B88214D00B75D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		473151721B88214D00B75D93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		473151751B88214D00B75D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				4731516B1B88214C00B75D93 /* AppDelegate.swift */,
-				4731516D1B88214C00B75D93 /* ViewController.swift */,
 				4731516F1B88214D00B75D93 /* Main.storyboard */,
 				473151721B88214D00B75D93 /* Images.xcassets */,
 				473151741B88214D00B75D93 /* LaunchScreen.xib */,
@@ -212,7 +209,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4731516E1B88214C00B75D93 /* ViewController.swift in Sources */,
 				4731516C1B88214C00B75D93 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +405,7 @@
 				473151871B88214D00B75D93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		473151881B88214D00B75D93 /* Build configuration list for PBXNativeTarget "LifeLogMusicTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +414,7 @@
 				4731518A1B88214D00B75D93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
