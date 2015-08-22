@@ -19,7 +19,7 @@ class Message : Mappable {
     
     func mapping(map: Map) {
         userName <- map["user"]
-        fileName <- map["fileName"]
+        fileName <- map["filename"]
     }
     
 }

@@ -56,14 +56,15 @@ class APIClient {
         )
     }
     
-    func download(path: String, callback:CallbackType) {
+    func download(username: String, filename: String, callback:(Result<NSData, NSError>) -> Void) {
         Alamofire
-            .request(.GET, self.createUrl("converted/" + path))
-            .responseJSON { (request, response, JSON, error) in
+            .request(.GET, self.createUrl("converted/" + username + "/" + filename))
+            .response { (request, response, data, error) in
                 if let error = error {
                     callback(Result(error: error))
-                } else {
-                    callback(Result(value: JSON!))
+                }
+                if let data = data {
+                    callback(Result(value: data))
                 }
         }
     }
