@@ -22,7 +22,7 @@ class FilterViewController : UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         sendButton.enabled = emotion != nil
     }
     @IBOutlet weak var sendButton: UIButton!

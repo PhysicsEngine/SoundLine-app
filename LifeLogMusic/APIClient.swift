@@ -43,7 +43,6 @@ class APIClient {
                 switch encodingResult {
                 case .Success(let upload, _, _):
                     upload.response { request, response, data, error in
-                        println("request body: \(request.HTTPBody)")
                         if let error = error {
                             return callback(Result(error: error))
                         }

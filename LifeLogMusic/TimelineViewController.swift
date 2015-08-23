@@ -80,5 +80,4 @@ extension TimelineViewController : UITableViewDataSource {
         return cell
     }
     
-    
 }

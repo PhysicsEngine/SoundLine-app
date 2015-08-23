@@ -125,7 +125,9 @@ class RecordingViewController : UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let filterVC = segue.destinationViewController as? FilterViewController {
+            filterVC.hidesBottomBarWhenPushed = true
             filterVC.audio = audio
+            filterVC.navigationController?.view.setNeedsLayout()
         }
     }
     

@@ -235,7 +235,7 @@
                                     <constraint firstAttribute="height" constant="68" id="gDb-OU-X19"/>
                                     <constraint firstAttribute="width" constant="128" id="sbt-Eb-yfS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="25"/>
                                 <state key="normal" title="Send">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
