@@ -14,6 +14,7 @@ class RecordingViewController : UIViewController {
     // MARK: - Property
     
     var recorder: AVAudioRecorder?
+    var audio: NSData!
     
     // MARK: - IBOutlet/IBAction
     
@@ -122,6 +123,12 @@ class RecordingViewController : UIViewController {
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let filterVC = segue.destinationViewController as? FilterViewController {
+            filterVC.audio = audio
+        }
+    }
+    
 }
 
 // MARK: - AVAudioRecorderDelegate
@@ -132,15 +139,14 @@ extension RecordingViewController : AVAudioRecorderDelegate {
         
         recordButton.setTitle("Record", forState:.Normal)
         
-        var data = NSData(contentsOfURL:recorder.url, options:nil, error:nil)!
-        println("DataSize: \(data.length)")
-
-        APIClient.sharedClient.upload(data, callback: { result in
-            println(result)
-        })
+        self.audio = NSData(contentsOfURL:recorder.url, options:nil, error:nil)!
+        println("DataSize: \(self.audio.length)")
+        
+        self.performSegueWithIdentifier("toFilter", sender: nil)
     }
     
     func audioRecorderEncodeErrorDidOccur(recorder: AVAudioRecorder!, error: NSError!) {
         println("\(error.localizedDescription)")
     }
+    
 }
