@@ -16,7 +16,8 @@ class APIClient {
     
     static let sharedClient = APIClient()
     
-    private let domain = "http://serene-savannah-7700.herokuapp.com"
+    //private let domain = "http://serene-savannah-7700.herokuapp.com"
+    private let domain = "http://172.16.200.132:5000"
     
     func timeline(callback:(Result<Timeline, NSError>)->()) {
         Alamofire
@@ -36,7 +37,7 @@ class APIClient {
         .upload(.POST, URLString: self.createUrl("upload"), headers: nil, multipartFormData: { multipartFormData in
             multipartFormData.appendBodyPart(data: "gologo".dataUsingEncoding(NSUTF8StringEncoding)!, name: "username")
             multipartFormData.appendBodyPart(data: emotion.dataUsingEncoding(NSUTF8StringEncoding)!, name: "filter")
-            multipartFormData.appendBodyPart(data: audio, name: "file", fileName: "unko.m4a", mimeType: "video/m4a")
+            multipartFormData.appendBodyPart(data: audio, name: "file", fileName: "voice.m4a", mimeType: "video/m4a")
             },
             encodingMemoryThreshold: Manager.MultipartFormDataEncodingMemoryThreshold,
             encodingCompletion: { encodingResult in

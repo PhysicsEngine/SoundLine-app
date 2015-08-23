@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import Foundation
+import SVProgressHUD
 
 class TimelineViewController : UIViewController {
     
@@ -17,23 +18,51 @@ class TimelineViewController : UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private var timeline: Timeline?
     private var player: AVAudioPlayer?
+    private var refreshControl = UIRefreshControl()
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.tableView.rowHeight = 80.0
+//        refreshControl.hidden = true
+//        self.tableView.addSubview(refreshControl)
+//        refreshControl.addTarget(self, action: "didRefreshControl:", forControlEvents: UIControlEvents.ValueChanged)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+
+        reloadTimeline()
+    }
     
+    // MARK: - Private
+    
+    func didRefreshControl(sender: UIRefreshControl) {
+        
+        SVProgressHUD.show()
+        SVProgressHUD.showWithStatus("Loading...", maskType: SVProgressHUDMaskType.Gradient)
+        
+        APIClient.sharedClient.timeline { (result) -> Void in
+            SVProgressHUD.dismiss()
+            
+            self.timeline = result.value
+            println("Count: \(self.timeline?.users.count)")
+            
+            self.refreshControl.endRefreshing()
+            self.tableView.reloadData()
+        }
+    }
+    
+    private func reloadTimeline() {
         APIClient.sharedClient.timeline { (result) -> Void in
             self.timeline = result.value
             println("Count: \(self.timeline?.users.count)")
             self.tableView.reloadData()
         }
     }
+    
 }
 
 // MARK: - UITableViewDelegate
@@ -56,7 +85,7 @@ extension TimelineViewController : UITableViewDelegate {
                         println(error)
                         return
                     }
-                    self.player?.play()
+                    self.player!.play()
                 }
             })
         }
