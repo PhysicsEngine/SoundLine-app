@@ -15,18 +15,45 @@ class FilterViewController : UIViewController {
         case Happy = "happy"
         case Sad = "sad"
     }
-    
+
+    private var selectedButton: UIButton?
     private var emotion: EmotionType?
     var audio: NSData!
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        sendButton.enabled = emotion != nil
+    }
+    @IBOutlet weak var sendButton: UIButton!
+    
     @IBAction func didTapSadButton(sender: UIButton) {
+        sendButton.enabled = true
+        
+        selectedButton?.superview?.layer.borderWidth = 0
+        
+        selectedButton = sender
+        
         emotion = .Sad
-        //sender.superview?.
+        
+        sender.superview?.layer.borderColor = UIColor.blueColor().CGColor
+        sender.superview?.layer.borderWidth = 3.0
+        
         println("Sad!!!")
     }
     
     @IBAction func didTapHappyButton(sender: UIButton) {
+        sendButton.enabled = true
+        
+        selectedButton?.superview?.layer.borderWidth = 0
+        
+        selectedButton = sender
+        
         emotion = .Happy
+        
+        sender.superview?.layer.borderColor = UIColor.blueColor().CGColor
+        sender.superview?.layer.borderWidth = 3.0
+        
         println("Happy!!!")
     }
     
@@ -36,15 +63,15 @@ class FilterViewController : UIViewController {
         if let emotion = self.emotion {
             
             SVProgressHUD.show()
-            SVProgressHUD.showWithStatus("送信中です", maskType: SVProgressHUDMaskType.Gradient)
+            SVProgressHUD.showWithStatus("Sending...", maskType: SVProgressHUDMaskType.Gradient)
             
             APIClient.sharedClient.upload(audio, emotion: emotion.rawValue, callback: { result in
                 sender.enabled = true
                 
                 SVProgressHUD.dismiss()
-                SVProgressHUD.showSuccessWithStatus("送信完了")
+                SVProgressHUD.showSuccessWithStatus("Done!")
                 
-                let delay = 3.0 * Double(NSEC_PER_SEC)
+                let delay = 1.0 * Double(NSEC_PER_SEC)
                 let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
                 dispatch_after(time, dispatch_get_main_queue(), {
                     self.navigationController?.popToRootViewControllerAnimated(true)
@@ -52,7 +79,7 @@ class FilterViewController : UIViewController {
             })
         } else {
             sender.enabled = true
-            UIAlertView(title: "Error", message: "感情を選んでください", delegate: nil, cancelButtonTitle: "OK").show()
+            UIAlertView(title: "Error", message: "Select the emotion.", delegate: nil, cancelButtonTitle: "OK").show()
         }
     }
     
