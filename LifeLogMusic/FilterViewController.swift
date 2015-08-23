@@ -23,6 +23,9 @@ class FilterViewController : UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
+//        sendButton.layer.borderWidth = 1.0
+//        sendButton.layer.borderColor = UIColor.blueColor().CGColor
+//        sendButton.layer.cornerRadius = 10.0
         sendButton.enabled = emotion != nil
     }
     @IBOutlet weak var sendButton: UIButton!

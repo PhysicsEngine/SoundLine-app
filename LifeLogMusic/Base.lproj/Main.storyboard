@@ -229,7 +229,7 @@
                                     <constraint firstItem="rKG-DL-Myi" firstAttribute="leading" secondItem="OhP-rY-DjU" secondAttribute="leading" id="p0L-oS-hmh"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wu5-jV-DYB">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wu5-jV-DYB">
                                 <rect key="frame" x="236" y="453" width="128" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="gDb-OU-X19"/>
@@ -253,10 +253,12 @@
                             <constraint firstAttribute="centerX" secondItem="wu5-jV-DYB" secondAttribute="centerX" id="eBD-v2-3QK"/>
                             <constraint firstItem="4q1-8o-feQ" firstAttribute="top" secondItem="Ywn-St-412" secondAttribute="bottom" constant="40" id="ncQ-8i-vNY"/>
                             <constraint firstAttribute="centerX" secondItem="4q1-8o-feQ" secondAttribute="centerX" constant="100" id="utb-BH-2rW"/>
+                            <constraint firstItem="wu5-jV-DYB" firstAttribute="top" secondItem="OhP-rY-DjU" secondAttribute="bottom" constant="149" id="wD3-K2-qpY"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="cGc-Gp-1TQ"/>
+                                <exclude reference="C8p-Pq-wsA"/>
                             </mask>
                         </variation>
                     </view>
