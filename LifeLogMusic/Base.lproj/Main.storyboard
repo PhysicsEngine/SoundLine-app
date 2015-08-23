@@ -116,12 +116,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="microphone" translatesAutoresizingMaskIntoConstraints="NO" id="9w1-kh-MPa">
                                 <rect key="frame" x="180" y="180" width="240" height="240"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDd-Z3-eOe">
-                                <rect key="frame" x="279" y="446" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqP-RO-OX2">
                                 <rect key="frame" x="180" y="491" width="50" height="30"/>
                                 <constraints>
@@ -154,9 +148,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="1GI-ye-xsE"/>
                     <connections>
-                        <outlet property="displayLabel" destination="UDd-Z3-eOe" id="dch-od-0jX"/>
                         <outlet property="recordButton" destination="MqP-RO-OX2" id="aaa-O8-xx0"/>
                         <outlet property="stopButton" destination="VtT-JV-me3" id="BgP-5a-EKP"/>
+                        <segue destination="veS-Ds-KUO" kind="show" identifier="toFilter" id="fii-Jn-YTo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VFC-G6-FgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -174,7 +168,98 @@
                     <view key="view" contentMode="scaleToFill" id="8Uc-O0-BWn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4q1-8o-feQ" userLabel="Happy View">
+                                <rect key="frame" x="77" y="64" width="200" height="200"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="tpK-qM-LGM">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgS-cV-Itr">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="BeN-51-vOc"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Fie-p2-ELA"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="TkE-na-k2l"/>
+                                            <constraint firstAttribute="height" constant="200" id="h7n-PN-8Jv"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapHappyButton:" destination="veS-Ds-KUO" eventType="touchUpInside" id="1mB-jQ-cen"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="mgS-cV-Itr" firstAttribute="leading" secondItem="4q1-8o-feQ" secondAttribute="leading" id="4hL-1W-u85"/>
+                                    <constraint firstItem="mgS-cV-Itr" firstAttribute="top" secondItem="4q1-8o-feQ" secondAttribute="top" id="Ysv-0U-cns"/>
+                                    <constraint firstAttribute="bottom" secondItem="mgS-cV-Itr" secondAttribute="bottom" id="eR7-Dz-YVe"/>
+                                    <constraint firstAttribute="trailing" secondItem="mgS-cV-Itr" secondAttribute="trailing" id="yOx-jK-YyO"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhP-rY-DjU" userLabel="Sad View">
+                                <rect key="frame" x="325" y="64" width="200" height="200"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sad" translatesAutoresizingMaskIntoConstraints="NO" id="Jnf-id-zeS">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKG-DL-Myi">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="CrU-Gb-loM"/>
+                                            <constraint firstAttribute="height" constant="200" id="EAR-cf-bkc"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="Yt8-fw-UqY"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="aXF-KJ-C0d"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapSadButton:" destination="veS-Ds-KUO" eventType="touchUpInside" id="aa6-c3-C0K"/>
+                                            <action selector="didTapSendButton:" destination="veS-Ds-KUO" eventType="touchUpInside" id="gtS-4m-gJ9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="rKG-DL-Myi" firstAttribute="top" secondItem="OhP-rY-DjU" secondAttribute="top" id="CMP-1c-uOw"/>
+                                    <constraint firstAttribute="bottom" secondItem="rKG-DL-Myi" secondAttribute="bottom" id="eEp-uX-g2X"/>
+                                    <constraint firstAttribute="trailing" secondItem="rKG-DL-Myi" secondAttribute="trailing" id="ixb-w0-gbu"/>
+                                    <constraint firstItem="rKG-DL-Myi" firstAttribute="leading" secondItem="OhP-rY-DjU" secondAttribute="leading" id="p0L-oS-hmh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wu5-jV-DYB">
+                                <rect key="frame" x="236" y="463" width="128" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="gDb-OU-X19"/>
+                                    <constraint firstAttribute="width" constant="128" id="sbt-Eb-yfS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSendButton:" destination="veS-Ds-KUO" eventType="touchUpInside" id="GmY-km-T2d"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dFo-zu-jIw" firstAttribute="top" secondItem="wu5-jV-DYB" secondAttribute="bottom" constant="20" id="C8p-Pq-wsA"/>
+                            <constraint firstAttribute="centerX" secondItem="OhP-rY-DjU" secondAttribute="centerX" constant="-90" id="Hn9-AQ-kgd"/>
+                            <constraint firstItem="OhP-rY-DjU" firstAttribute="top" secondItem="Ywn-St-412" secondAttribute="bottom" id="LIs-a3-PaN"/>
+                            <constraint firstItem="OhP-rY-DjU" firstAttribute="top" secondItem="Ywn-St-412" secondAttribute="bottom" constant="44" id="cGc-Gp-1TQ"/>
+                            <constraint firstAttribute="centerX" secondItem="wu5-jV-DYB" secondAttribute="centerX" id="eBD-v2-3QK"/>
+                            <constraint firstItem="4q1-8o-feQ" firstAttribute="top" secondItem="Ywn-St-412" secondAttribute="bottom" id="ncQ-8i-vNY"/>
+                            <constraint firstAttribute="centerX" secondItem="4q1-8o-feQ" secondAttribute="centerX" constant="90" id="utb-BH-2rW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cGc-Gp-1TQ"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kYk-cd-jKE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -258,8 +343,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="happy" width="300" height="300"/>
         <image name="microphone" width="240" height="240"/>
         <image name="play_button" width="300" height="300"/>
+        <image name="sad" width="250" height="227"/>
         <image name="soundcloud-waveform" width="670" height="176"/>
     </resources>
 </document>
