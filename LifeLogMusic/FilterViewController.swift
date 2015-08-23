@@ -63,13 +63,13 @@ class FilterViewController : UIViewController {
         if let emotion = self.emotion {
             
             SVProgressHUD.show()
-            SVProgressHUD.showWithStatus("送信中です", maskType: SVProgressHUDMaskType.Gradient)
+            SVProgressHUD.showWithStatus("Sending...", maskType: SVProgressHUDMaskType.Gradient)
             
             APIClient.sharedClient.upload(audio, emotion: emotion.rawValue, callback: { result in
                 sender.enabled = true
                 
                 SVProgressHUD.dismiss()
-                SVProgressHUD.showSuccessWithStatus("送信完了")
+                SVProgressHUD.showSuccessWithStatus("Done!")
                 
                 let delay = 1.0 * Double(NSEC_PER_SEC)
                 let time  = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
@@ -79,7 +79,7 @@ class FilterViewController : UIViewController {
             })
         } else {
             sender.enabled = true
-            UIAlertView(title: "Error", message: "感情を選んでください", delegate: nil, cancelButtonTitle: "OK").show()
+            UIAlertView(title: "Error", message: "Select the emotion.", delegate: nil, cancelButtonTitle: "OK").show()
         }
     }
     
