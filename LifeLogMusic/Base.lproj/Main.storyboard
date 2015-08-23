@@ -324,11 +324,11 @@
             </objects>
             <point key="canvasLocation" x="434" y="583"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Timeline-->
         <scene sceneID="dTS-bF-Cok">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T2h-Kj-CL3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="JQq-wj-aoL"/>
+                    <tabBarItem key="tabBarItem" title="Timeline" image="home" id="JQq-wj-aoL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="g7F-5r-HoK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -346,6 +346,7 @@
     </scenes>
     <resources>
         <image name="happy" width="300" height="300"/>
+        <image name="home" width="30" height="30"/>
         <image name="microphone" width="240" height="240"/>
         <image name="play_button" width="300" height="300"/>
         <image name="sad" width="250" height="227"/>
