@@ -15,18 +15,45 @@ class FilterViewController : UIViewController {
         case Happy = "happy"
         case Sad = "sad"
     }
-    
+
+    private var selectedButton: UIButton?
     private var emotion: EmotionType?
     var audio: NSData!
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        sendButton.enabled = emotion != nil
+    }
+    @IBOutlet weak var sendButton: UIButton!
+    
     @IBAction func didTapSadButton(sender: UIButton) {
+        sendButton.enabled = true
+        
+        selectedButton?.superview?.layer.borderWidth = 0
+        
+        selectedButton = sender
+        
         emotion = .Sad
-        //sender.superview?.
+        
+        sender.superview?.layer.borderColor = UIColor.blueColor().CGColor
+        sender.superview?.layer.borderWidth = 3.0
+        
         println("Sad!!!")
     }
     
     @IBAction func didTapHappyButton(sender: UIButton) {
+        sendButton.enabled = true
+        
+        selectedButton?.superview?.layer.borderWidth = 0
+        
+        selectedButton = sender
+        
         emotion = .Happy
+        
+        sender.superview?.layer.borderColor = UIColor.blueColor().CGColor
+        sender.superview?.layer.borderWidth = 3.0
+        
         println("Happy!!!")
     }
     
