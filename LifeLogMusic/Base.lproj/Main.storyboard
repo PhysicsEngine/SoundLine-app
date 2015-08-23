@@ -305,11 +305,11 @@
             </objects>
             <point key="canvasLocation" x="-378" y="-110"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Record-->
         <scene sceneID="3Pe-4o-vUc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lhU-Sp-SoS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="iHB-lE-ifD"/>
+                    <tabBarItem key="tabBarItem" title="Record" image="tabbar-microphone" id="iHB-lE-ifD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4IQ-ep-ggT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -351,5 +351,6 @@
         <image name="play_button" width="300" height="300"/>
         <image name="sad" width="250" height="227"/>
         <image name="soundcloud-waveform" width="670" height="176"/>
+        <image name="tabbar-microphone" width="30" height="30"/>
     </resources>
 </document>
