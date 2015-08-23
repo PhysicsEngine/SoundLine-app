@@ -204,7 +204,6 @@
                                         </state>
                                         <connections>
                                             <action selector="didTapSadButton:" destination="veS-Ds-KUO" eventType="touchUpInside" id="aa6-c3-C0K"/>
-                                            <action selector="didTapSendButton:" destination="veS-Ds-KUO" eventType="touchUpInside" id="gtS-4m-gJ9"/>
                                         </connections>
                                     </button>
                                 </subviews>
