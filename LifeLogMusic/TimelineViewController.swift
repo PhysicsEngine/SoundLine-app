@@ -30,6 +30,7 @@ class TimelineViewController : UIViewController {
     
         APIClient.sharedClient.timeline { (result) -> Void in
             self.timeline = result.value
+            println("Count: \(self.timeline?.users.count)")
             self.tableView.reloadData()
         }
     }

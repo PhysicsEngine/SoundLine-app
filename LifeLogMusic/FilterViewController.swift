@@ -28,6 +28,13 @@ class FilterViewController : UIViewController {
 //        sendButton.layer.cornerRadius = 10.0
         sendButton.enabled = emotion != nil
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.tabBarController?.selectedIndex = 0
+    }
+    
     @IBOutlet weak var sendButton: UIButton!
     
     @IBAction func didTapSadButton(sender: UIButton) {
