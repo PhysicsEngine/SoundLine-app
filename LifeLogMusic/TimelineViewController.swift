@@ -19,6 +19,7 @@ class TimelineViewController : UIViewController {
     private var timeline: Timeline?
     private var player: AVAudioPlayer?
     private var refreshControl = UIRefreshControl()
+//    private var timer = NSTimer(timeInterval: 1.0, target: self, selector: "didRefreshControl:", userInfo: nil, repeats: true)
     
     // MARK: - Lifecycle
     
@@ -39,7 +40,7 @@ class TimelineViewController : UIViewController {
     
     // MARK: - Private
     
-    func didRefreshControl(sender: UIRefreshControl) {
+    func didRefreshControl(sender: AnyObject) {
         
         SVProgressHUD.show()
         SVProgressHUD.showWithStatus("Loading...", maskType: SVProgressHUDMaskType.Gradient)
@@ -81,6 +82,7 @@ extension TimelineViewController : UITableViewDelegate {
                     
                     var error:NSError?
                     self.player = AVAudioPlayer(contentsOfURL: URL, error: &error)
+                    self.player?.volume = 1.0
                     if let error = error {
                         println(error)
                         return

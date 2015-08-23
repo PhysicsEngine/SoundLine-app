@@ -62,6 +62,7 @@ class RecordingViewController : UIViewController {
     
     func recordWithPermission(setup:Bool) {
         let session = AVAudioSession.sharedInstance()
+        session.setCategory(AVAudioSessionCategoryAmbient, error: nil)
         // ios 8 and later
         if session.respondsToSelector("requestRecordPermission:") {
             AVAudioSession.sharedInstance().requestRecordPermission { granted in

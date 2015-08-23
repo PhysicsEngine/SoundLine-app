@@ -163,9 +163,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		473151651B88214C00B75D93 /* LifeLogMusic */ = {
+		473151651B88214C00B75D93 /* SoundLine */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 473151851B88214D00B75D93 /* Build configuration list for PBXNativeTarget "LifeLogMusic" */;
+			buildConfigurationList = 473151851B88214D00B75D93 /* Build configuration list for PBXNativeTarget "SoundLine" */;
 			buildPhases = (
 				4488CBB60D2866FAAFE8EE8F /* Check Pods Manifest.lock */,
 				473151621B88214C00B75D93 /* Sources */,
@@ -178,7 +178,7 @@
 			);
 			dependencies = (
 			);
-			name = LifeLogMusic;
+			name = SoundLine;
 			productName = LifeLogMusic;
 			productReference = 473151661B88214C00B75D93 /* LifeLogMusic.app */;
 			productType = "com.apple.product-type.application";
@@ -233,7 +233,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				473151651B88214C00B75D93 /* LifeLogMusic */,
+				473151651B88214C00B75D93 /* SoundLine */,
 				4731517A1B88214D00B75D93 /* LifeLogMusicTests */,
 			);
 		};
@@ -338,7 +338,7 @@
 /* Begin PBXTargetDependency section */
 		4731517D1B88214D00B75D93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 473151651B88214C00B75D93 /* LifeLogMusic */;
+			target = 473151651B88214C00B75D93 /* SoundLine */;
 			targetProxy = 4731517C1B88214D00B75D93 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -518,7 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		473151851B88214D00B75D93 /* Build configuration list for PBXNativeTarget "LifeLogMusic" */ = {
+		473151851B88214D00B75D93 /* Build configuration list for PBXNativeTarget "SoundLine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				473151861B88214D00B75D93 /* Debug */,
