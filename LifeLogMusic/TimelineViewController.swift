@@ -22,6 +22,7 @@ class TimelineViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = 80.0
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -75,6 +76,7 @@ extension TimelineViewController : UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TableViewCellID", forIndexPath: indexPath) as! TableViewCell
         cell.usernameLabel.text = timeline?.users[indexPath.row].userName
+        cell.filenameLabel.text = timeline?.users[indexPath.row].fileName;
         return cell
     }
     

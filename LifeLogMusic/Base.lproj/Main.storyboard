@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KgX-Jt-4p9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--SoundLine-->
@@ -17,33 +16,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gEg-PQ-sJL">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gEg-PQ-sJL">
                                 <rect key="frame" x="16" y="0.0" width="568" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="TableViewCellID" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCellID" rowHeight="60" id="uF7-sF-xhs" customClass="TableViewCell" customModule="LifeLogMusic" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="TableViewCellID" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCellID" textLabel="mHx-J5-iNa" detailTextLabel="dQ1-Ed-thv" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="uF7-sF-xhs" customClass="TableViewCell" customModule="LifeLogMusic" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uF7-sF-xhs" id="zNm-D3-Rvc">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gologo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oY5-Et-JHw">
-                                                    <rect key="frame" x="13" y="25" width="100" height="21"/>
+                                                <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="soundcloud-waveform" translatesAutoresizingMaskIntoConstraints="NO" id="cvH-xk-ogg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="284" height="100"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="lxH-g5-yPG"/>
-                                                        <constraint firstAttribute="width" constant="100" id="u5z-kx-A6x"/>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="340" id="zza-AY-mCL"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </imageView>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mHx-J5-iNa">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dQ1-Ed-thv">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="oY5-Et-JHw" secondAttribute="bottom" constant="5" id="Giz-qC-x2C"/>
-                                                <constraint firstItem="oY5-Et-JHw" firstAttribute="leading" secondItem="zNm-D3-Rvc" secondAttribute="leadingMargin" constant="5" id="MR3-GV-p8Y"/>
+                                                <constraint firstItem="cvH-xk-ogg" firstAttribute="top" secondItem="zNm-D3-Rvc" secondAttribute="top" id="Ie7-uj-92I"/>
+                                                <constraint firstItem="cvH-xk-ogg" firstAttribute="leading" secondItem="zNm-D3-Rvc" secondAttribute="leading" id="qOU-AC-6Na"/>
+                                                <constraint firstItem="cvH-xk-ogg" firstAttribute="centerY" secondItem="dQ1-Ed-thv" secondAttribute="centerY" id="zJS-lY-WrT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="usernameLabel" destination="oY5-Et-JHw" id="RX5-Si-eAS"/>
+                                            <outlet property="filenameLabel" destination="dQ1-Ed-thv" id="tKX-pY-eTd"/>
+                                            <outlet property="usernameLabel" destination="mHx-J5-iNa" id="CBH-cr-0Yt"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -55,12 +64,6 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="gEg-PQ-sJL" secondAttribute="trailing" id="8G9-ww-LVQ"/>
-                            <constraint firstItem="gEg-PQ-sJL" firstAttribute="top" secondItem="KXv-kL-CEQ" secondAttribute="topMargin" id="cUG-aB-gtN"/>
-                            <constraint firstItem="ZlO-VI-Z9y" firstAttribute="top" secondItem="gEg-PQ-sJL" secondAttribute="bottom" id="jho-mb-aQU"/>
-                            <constraint firstItem="gEg-PQ-sJL" firstAttribute="leading" secondItem="KXv-kL-CEQ" secondAttribute="leadingMargin" id="pm0-PH-UGi"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SoundLine" id="JAK-mX-jsK"/>
                     <connections>
@@ -102,7 +105,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDd-Z3-eOe">
                                 <rect key="frame" x="279" y="446" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqP-RO-OX2">
@@ -242,5 +245,6 @@
     </scenes>
     <resources>
         <image name="microphone" width="240" height="240"/>
+        <image name="soundcloud-waveform" width="670" height="176"/>
     </resources>
 </document>
