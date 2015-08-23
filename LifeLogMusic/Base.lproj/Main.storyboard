@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KgX-Jt-4p9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--SoundLine-->
@@ -25,6 +26,15 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uF7-sF-xhs" id="zNm-D3-Rvc">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L19-5p-8Tn">
+                                                    <rect key="frame" x="290" y="20" width="40" height="41"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="7g6-7q-qGM"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="play_button">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                                 <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="soundcloud-waveform" translatesAutoresizingMaskIntoConstraints="NO" id="cvH-xk-ogg">
                                                     <rect key="frame" x="0.0" y="0.0" width="284" height="100"/>
                                                     <constraints>
@@ -45,7 +55,11 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="L19-5p-8Tn" secondAttribute="bottom" constant="10" id="IRw-Yb-BDQ"/>
                                                 <constraint firstItem="cvH-xk-ogg" firstAttribute="top" secondItem="zNm-D3-Rvc" secondAttribute="top" id="Ie7-uj-92I"/>
+                                                <constraint firstItem="L19-5p-8Tn" firstAttribute="leading" secondItem="cvH-xk-ogg" secondAttribute="trailing" constant="-50" id="Lol-gR-AUx"/>
+                                                <constraint firstItem="L19-5p-8Tn" firstAttribute="top" secondItem="cvH-xk-ogg" secondAttribute="top" constant="20" id="gLK-iX-KJN"/>
+                                                <constraint firstAttribute="trailing" secondItem="L19-5p-8Tn" secondAttribute="trailing" constant="230" id="grm-4s-Mz0"/>
                                                 <constraint firstItem="cvH-xk-ogg" firstAttribute="leading" secondItem="zNm-D3-Rvc" secondAttribute="leading" id="qOU-AC-6Na"/>
                                                 <constraint firstItem="cvH-xk-ogg" firstAttribute="centerY" secondItem="dQ1-Ed-thv" secondAttribute="centerY" id="zJS-lY-WrT"/>
                                             </constraints>
@@ -245,6 +259,7 @@
     </scenes>
     <resources>
         <image name="microphone" width="240" height="240"/>
+        <image name="play_button" width="300" height="300"/>
         <image name="soundcloud-waveform" width="670" height="176"/>
     </resources>
 </document>
