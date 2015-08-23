@@ -11,4 +11,5 @@ import UIKit
 class TableViewCell : UITableViewCell {
     
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var filenameLabel: UILabel!
 }
